@@ -1,0 +1,12 @@
+[
+	{
+		"nomCreateur": "Espace Courbe Formation",
+		"nomTheme": "Minimal",
+		"urlCSS": "themes/minimal/styles.css"
+	},
+	{
+		"nomCreateur": "Juan Stéphan",
+		"nomTheme": "Thème de départ",
+		"urlCSS": "themes/juan-stephan/styles.css"
+	}
+]

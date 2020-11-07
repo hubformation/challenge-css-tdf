@@ -1,0 +1,992 @@
+/* CSS Document */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,400;0,600;0,800;1,400;1,800&display=swap");
+html {
+  font: 400 100%/1.325 Montserrat, Helvetica, Arial, sans-serif;
+  color: #313131;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background: #ced9bf;
+}
+.hidden {
+  display: none;
+}
+/*------------------------entete-----------------------------------*/
+#entete {
+  background: url("images/fond.jpg") no-repeat 100% center fixed;
+  background-size: cover;
+  padding: 5%;
+  height: 100vh;
+  display: flex;
+  position: relative;
+}
+#entete .wrapper {
+  margin: auto;
+}
+#entete h1 {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  color: #fff;
+  align-items: center;
+  margin: 0;
+  text-shadow: 0 0 5px #678c42;
+  position: relative;
+  text-transform: uppercase;
+  font-size: 6vw;
+}
+@media screen and (min-width: 768px) {
+  #entete h1 {
+    flex-direction: row;
+    text-align: left;
+    font-size: 3vw;
+  }
+}
+#entete h1:before {
+  content: "";
+  display: block;
+  width: 200px;
+  height: 200px;
+  background: rgba(255, 255, 255, 0.3) url(images/images.svg) no-repeat center
+    center;
+  background-size: 40%;
+  flex-shrink: 0;
+  border-radius: 100%;
+  opacity: 0.75;
+}
+@media screen and (min-width: 768px) {
+  #entete h1 {
+    flex-direction: row;
+  }
+  #entete h1:before {
+    margin-right: 2rem;
+  }
+}
+#entete h1 span {
+  display: block;
+  font-weight: 400;
+}
+#entete h1 > span {
+  margin-left: auto;
+}
+
+@media screen and (min-width: 768px) {
+  #entete h1 > span {
+    margin-left: 0;
+  }
+}
+#entete h1 .challenge {
+  transform: translateX(-12%);
+}
+#entete h1 .challenge,
+#entete h1 .css abbr[title] {
+  font-weight: 800;
+  font-size: 200%;
+  line-height: 95%;
+  border-bottom: none !important;
+  cursor: inherit !important;
+  text-decoration: none !important;
+}
+#entete h1 .css {
+  display: flex;
+  align-items: center;
+}
+#entete h1 .le,
+#entete h1 .css span {
+  font-size: 80%;
+  line-height: 105%;
+}
+#entete h1 .css span {
+  margin-left: 5%;
+}
+.intro {
+  font-size: 100%;
+  margin: 2rem 5%;
+  color: rgba(0, 0, 0, 0.8);
+  transition: all 0.3s ease;
+}
+@media screen and (min-width: 768px) {
+  .intro {
+    font-size: 150%;
+    margin: 2rem 25%;
+  }
+}
+#contenu {
+  display: flex;
+  flex-direction: column;
+  background: url("images/fond.jpg") no-repeat 100% center fixed;
+}
+@media screen and (min-width: 992px) {
+  #contenu {
+    flex-direction: row;
+  }
+  #contenu .wrapper-contenu {
+    flex: 0 0 75%;
+  }
+  #contenu .sidebar {
+    flex: 0 0 25%;
+  }
+}
+.tabs ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+h2,
+h3,
+h4,
+h5 {
+  color: #678c42;
+  text-transform: uppercase;
+}
+h4,
+h5 {
+  font-weight: 400;
+}
+h2,
+h3 {
+  font-weight: 600;
+}
+p {
+  margin: 0 0 1rem;
+}
+ul li,
+ol li {
+  margin-bottom: 1rem;
+}
+a {
+  color: #678c42;
+}
+
+/* --------------------sidebar ---------------------------*/
+.sidebar {
+  background: rgba(255, 255, 255, 0.6);
+}
+.intro-contribution {
+  font-size: 1rem;
+  padding-bottom: 2rem;
+  margin-bottom: 0;
+}
+
+.sidebar a {
+  color: #678c42;
+}
+
+.liste-design ul {
+  margin: 0 0 2rem;
+  padding: 0;
+  list-style: none;
+}
+
+.liste-design ul li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  margin: 1rem 0;
+}
+.liste-design ul li a {
+  display: block;
+  text-transform: uppercase;
+  font-size: 120%;
+  text-decoration: none;
+}
+/* ------------------- boutons ---------------------------*/
+.btn,
+.play-stop-control {
+  display: inline-block;
+  border: 2px solid #678c42;
+  color: #678c42;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  font-weight: 600;
+  background: #fff;
+  transition: all 0.3s ease;
+}
+.btn:hover {
+  background: #678c42;
+  color: #fff;
+}
+.contenu-chanson,
+.contenu-recette,
+.contenu-horaire,
+.sidebar {
+  padding: 5%;
+}
+/* ---------------- section chanson --------------------*/
+.contenu-chanson {
+  background: rgba(255, 255, 255, 0.8);
+}
+.contenu-chason article figure {
+  margin: 1rem 0;
+}
+@media screen and (min-width: 768px) {
+  .contenu-chanson article {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .contenu-chason article h2 {
+    flex: 0 0 100%;
+  }
+  .contenu-chason article .parole,
+  .contenu-chason article figure {
+    flex: 0 0 50%;
+  }
+}
+
+.audio,
+.parole {
+  flex: 1;
+}
+.audio {
+  margin: 1rem 0;
+}
+.audio figcaption {
+  margin-top: 2rem;
+  font-size: 80%;
+}
+.audio figcaption span {
+  display: block;
+}
+.audio figcaption span:first-of-type {
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+}
+
+/*--------------- lecteur audio ------------------ */
+input[type="range"] {
+  -webkit-appearance: none;
+  margin: 2rem 0;
+  width: 100%;
+}
+input[type="range"]:focus {
+  outline: none;
+}
+input[type="range"]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  background: #678c42;
+  border-radius: 1.3px;
+}
+input[type="range"]::-webkit-slider-thumb {
+  border: 2px solid #fff;
+  height: 2rem;
+  width: 2rem;
+  background: #678c42;
+  border-radius: 100%;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -0.8rem;
+}
+input[type="range"]:focus::-webkit-slider-runnable-track {
+  background: #678c42;
+}
+input[type="range"]::-moz-range-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  background: #3071a9;
+  border-radius: 1.3px;
+  border: 0.2px solid #010101;
+}
+input[type="range"]::-moz-range-thumb {
+  border: 2px solid #fff;
+  height: 2rem;
+  width: 2rem;
+  background: #678c42;
+  border-radius: 100%;
+  cursor: pointer;
+}
+input[type="range"]::-ms-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  border-width: 16px 0;
+  color: transparent;
+}
+input[type="range"]::-ms-fill-lower {
+  background: #678c42;
+  border: 0.2px solid #010101;
+  border-radius: 2.6px;
+}
+input[type="range"]::-ms-fill-upper {
+  background: #678c42;
+  border: 0.2px solid #010101;
+  border-radius: 2.6px;
+}
+input[type="range"]::-ms-thumb {
+  border: 2px solid #fff;
+  height: 2rem;
+  width: 2rem;
+  background: #678c42;
+  cursor: pointer;
+}
+input[type="range"]:focus::-ms-fill-lower {
+  background: #678c42;
+}
+input[type="range"]:focus::-ms-fill-upper {
+  background: #678c42;
+}
+
+.player {
+  padding: 10%;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 1);
+}
+.clip-progress {
+  padding: 0 2rem;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 3rem;
+  margin: 2rem 0;
+  position: relative;
+}
+.clip-duration {
+  color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  bottom: -2rem;
+}
+.volume-control {
+  margin: 1rem 0;
+}
+
+/* ---------------- section recette --------------------*/
+.contenu-recette {
+  background: rgba(202, 217, 180, 0.8);
+}
+
+@media screen and (min-width: 768px) {
+  .contenu-recette ul {
+    column-count: 2;
+    column-gap: 2rem;
+  }
+}
+
+/* ---------------- section horaire --------------------*/
+.contenu-horaire {
+  background: #fff;
+}
+/* ---------------- footer -----------------------------*/
+#pied-page {
+  background: #678c42;
+  padding: 5%;
+  color: #fff;
+}
+#pied-page a {
+  color: #fff;
+  text-decoration: none;
+}
+.media-sociaux ul {
+  margin: 1rem 0;
+}
+.media-sociaux li {
+  margin: 0 0.5rem;
+}
+@media screen and (min-width: 768px) {
+  #pied-page {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.flocons {
+  position: absolute;
+  width: 80%;
+  height: 100vh;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.flocon {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 100%;
+  height: 10px;
+  width: 10px;
+  position: absolute;
+  top: 0;
+  z-index: 3;
+}
+.flocon:nth-child(0) {
+  animation: snow-0 14s infinite;
+}
+@keyframes snow-0 {
+  from {
+    transform: translate(72px, -214px);
+    opacity: 1;
+  }
+  to {
+    transform: translate(72px, 475px);
+    opacity: 0;
+  }
+}
+.flocon:nth-child(1) {
+  animation: snow-1 14s infinite;
+}
+@keyframes snow-1 {
+  from {
+    transform: translate(83px, -194px);
+    opacity: 1;
+  }
+  to {
+    transform: translate(83px, 586px);
+    opacity: 0;
+  }
+}
+.flocon:nth-child(2) {
+  animation: snow-2 14s infinite;
+}
+@keyframes snow-2 {
+  from {
+    transform: translate(77px, -159px);
+    opacity: 1;
+  }
+  to {
+    transform: translate(77px, 604px);
+    opacity: 0;
+  }
+}
+.flocon:nth-child(3) {
+  animation: snow-3 11s infinite;
+}
+@keyframes snow-3 {
+  from {
+    transform: translate(67px, -180px);
+    opacity: 1;
+  }
+  to {
+    transform: translate(67px, 576px);
+    opacity: 0;
+  }
+}
+.flocon:nth-child(4) {
+  animation: snow-4 13s infinite;
+}
+@keyframes snow-4 {
+  from {
+    transform: translate(297px, -245px);
+  }
+  to {
+    transform: translate(297px, 615px);
+  }
+}
+.flocon:nth-child(5) {
+  animation: snow-5 9s infinite;
+}
+@keyframes snow-5 {
+  from {
+    transform: translate(396px, -282px);
+  }
+  to {
+    transform: translate(396px, 548px);
+  }
+}
+.flocon:nth-child(6) {
+  animation: snow-6 9s infinite;
+  height: 20px;
+  width: 20px;
+}
+@keyframes snow-6 {
+  from {
+    transform: translate(226px, -224px);
+  }
+  to {
+    transform: translate(226px, 570px);
+  }
+}
+.flocon:nth-child(7) {
+  animation: snow-7 6s infinite;
+}
+@keyframes snow-7 {
+  from {
+    transform: translate(268px, -71px);
+  }
+  to {
+    transform: translate(268px, 463px);
+  }
+}
+.flocon:nth-child(8) {
+  animation: snow-8 11s infinite;
+}
+@keyframes snow-8 {
+  from {
+    transform: translate(166px, -81px);
+  }
+  to {
+    transform: translate(166px, 496px);
+  }
+}
+.flocon:nth-child(9) {
+  animation: snow-9 14s infinite;
+  height: 20px;
+  width: 20px;
+}
+@keyframes snow-9 {
+  from {
+    transform: translate(337px, -103px);
+  }
+  to {
+    transform: translate(337px, 420px);
+  }
+}
+.flocon:nth-child(10) {
+  animation: snow-10 9s infinite;
+}
+@keyframes snow-10 {
+  from {
+    transform: translate(155px, -205px);
+  }
+  to {
+    transform: translate(155px, 577px);
+  }
+}
+.flocon:nth-child(11) {
+  animation: snow-11 12s infinite;
+  height: 20px;
+  width: 20px;
+}
+@keyframes snow-11 {
+  from {
+    transform: translate(307px, -223px);
+  }
+  to {
+    transform: translate(307px, 647px);
+  }
+}
+.flocon:nth-child(12) {
+  animation: snow-12 15s infinite;
+}
+@keyframes snow-12 {
+  from {
+    transform: translate(379px, -262px);
+  }
+  to {
+    transform: translate(379px, 664px);
+  }
+}
+.flocon:nth-child(13) {
+  animation: snow-13 6s infinite;
+}
+@keyframes snow-13 {
+  from {
+    transform: translate(57px, -179px);
+  }
+  to {
+    transform: translate(57px, 578px);
+  }
+}
+.flocon:nth-child(14) {
+  animation: snow-14 7s infinite;
+  height: 20px;
+  width: 20px;
+}
+@keyframes snow-14 {
+  from {
+    transform: translate(393px, -258px);
+  }
+  to {
+    transform: translate(393px, 459px);
+  }
+}
+.flocon:nth-child(15) {
+  animation: snow-15 10s infinite;
+}
+@keyframes snow-15 {
+  from {
+    transform: translate(178px, -288px);
+  }
+  to {
+    transform: translate(178px, 495px);
+  }
+}
+.flocon:nth-child(16) {
+  animation: snow-16 14s infinite;
+}
+@keyframes snow-16 {
+  from {
+    transform: translate(393px, -150px);
+  }
+  to {
+    transform: translate(393px, 417px);
+  }
+}
+.flocon:nth-child(0) {
+  -webkit-animation: snow-0 14s infinite;
+  animation: snow-0 14s infinite;
+}
+@-webkit-keyframes snow-0 {
+  from {
+    transform: translate(72px, -214px);
+    opacity: 1;
+  }
+  to {
+    transform: translate(72px, 475px);
+    opacity: 0;
+  }
+}
+@keyframes snow-0 {
+  from {
+    transform: translate(72px, -214px);
+    opacity: 1;
+  }
+  to {
+    transform: translate(72px, 475px);
+    opacity: 0;
+  }
+}
+.flocon:nth-child(1) {
+  animation: snow-1 14s infinite;
+}
+@-webkit-keyframes snow-1 {
+  from {
+    transform: translate(83px, -194px);
+    opacity: 1;
+  }
+  to {
+    transform: translate(83px, 586px);
+    opacity: 0;
+  }
+}
+@keyframes snow-1 {
+  from {
+    transform: translate(83px, -194px);
+    opacity: 1;
+  }
+  to {
+    transform: translate(83px, 586px);
+    opacity: 0;
+  }
+}
+.flocon:nth-child(2) {
+  animation: snow-2 14s infinite;
+}
+@-webkit-keyframes snow-2 {
+  from {
+    transform: translate(77px, -159px);
+    opacity: 1;
+  }
+  to {
+    transform: translate(77px, 604px);
+    opacity: 0;
+  }
+}
+@keyframes snow-2 {
+  from {
+    transform: translate(77px, -159px);
+    opacity: 1;
+  }
+  to {
+    transform: translate(77px, 604px);
+    opacity: 0;
+  }
+}
+.flocon:nth-child(3) {
+  animation: snow-3 11s infinite;
+}
+@-webkit-keyframes snow-3 {
+  from {
+    transform: translate(67px, -180px);
+    opacity: 1;
+  }
+  to {
+    transform: translate(67px, 576px);
+    opacity: 0;
+  }
+}
+@keyframes snow-3 {
+  from {
+    transform: translate(67px, -180px);
+    opacity: 1;
+  }
+  to {
+    transform: translate(67px, 576px);
+    opacity: 0;
+  }
+}
+.flocon:nth-child(4) {
+  animation: snow-4 13s infinite;
+}
+@-webkit-keyframes snow-4 {
+  from {
+    transform: translate(297px, -245px);
+    opacity: 1;
+  }
+  to {
+    transform: translate(297px, 615px);
+    opacity: 0;
+  }
+}
+@keyframes snow-4 {
+  from {
+    transform: translate(297px, -245px);
+    opacity: 1;
+  }
+  to {
+    transform: translate(297px, 615px);
+    opacity: 0;
+  }
+}
+.flocon:nth-child(5) {
+  animation: snow-5 9s infinite;
+}
+@-webkit-keyframes snow-5 {
+  from {
+    transform: translate(396px, -282px);
+    opacity: 1;
+  }
+  to {
+    transform: translate(396px, 548px);
+    opacity: 0;
+  }
+}
+@keyframes snow-5 {
+  from {
+    transform: translate(396px, -282px);
+    opacity: 1;
+  }
+  to {
+    transform: translate(396px, 548px);
+    opacity: 0;
+  }
+}
+.flocon:nth-child(6) {
+  animation: snow-6 9s infinite;
+}
+@-webkit-keyframes snow-6 {
+  from {
+    transform: translate(226px, -224px);
+    opacity: 1;
+  }
+  to {
+    transform: translate(226px, 570px);
+    opacity: 0;
+  }
+}
+@keyframes snow-6 {
+  from {
+    transform: translate(226px, -224px);
+    opacity: 1;
+  }
+  to {
+    transform: translate(226px, 570px);
+    opacity: 0;
+  }
+}
+.flocon:nth-child(7) {
+  animation: snow-7 6s infinite;
+}
+@-webkit-keyframes snow-7 {
+  from {
+    transform: translate(268px, -71px);
+    opacity: 1;
+  }
+  to {
+    transform: translate(268px, 463px);
+    opacity: 0;
+  }
+}
+@keyframes snow-7 {
+  from {
+    transform: translate(268px, -71px);
+    opacity: 1;
+  }
+  to {
+    transform: translate(268px, 463px);
+    opacity: 0;
+  }
+}
+.flocon:nth-child(8) {
+  animation: snow-8 11s infinite;
+}
+@-webkit-keyframes snow-8 {
+  from {
+    transform: translate(166px, -81px);
+    opacity: 1;
+  }
+  to {
+    transform: translate(166px, 496px);
+    opacity: 0;
+  }
+}
+@keyframes snow-8 {
+  from {
+    transform: translate(166px, -81px);
+    opacity: 1;
+  }
+  to {
+    transform: translate(166px, 496px);
+    opacity: 0;
+  }
+}
+.flocon:nth-child(9) {
+  animation: snow-9 14s infinite;
+}
+@-webkit-keyframes snow-9 {
+  from {
+    transform: translate(337px, -103px);
+    opacity: 1;
+  }
+  to {
+    transform: translate(337px, 420px);
+    opacity: 0;
+  }
+}
+@keyframes snow-9 {
+  from {
+    transform: translate(337px, -103px);
+    opacity: 1;
+  }
+  to {
+    transform: translate(337px, 420px);
+    opacity: 0;
+  }
+}
+.flocon:nth-child(10) {
+  animation: snow-10 9s infinite;
+}
+@-webkit-keyframes snow-10 {
+  from {
+    transform: translate(155px, -205px);
+    opacity: 1;
+  }
+  to {
+    transform: translate(155px, 577px);
+    opacity: 0;
+  }
+}
+@keyframes snow-10 {
+  from {
+    transform: translate(155px, -205px);
+    opacity: 1;
+  }
+  to {
+    transform: translate(155px, 577px);
+    opacity: 0;
+  }
+}
+.flocon:nth-child(11) {
+  animation: snow-11 12s infinite;
+}
+@-webkit-keyframes snow-11 {
+  from {
+    transform: translate(307px, -223px);
+    opacity: 1;
+  }
+  to {
+    transform: translate(307px, 647px);
+    opacity: 0;
+  }
+}
+@keyframes snow-11 {
+  from {
+    transform: translate(307px, -223px);
+    opacity: 1;
+  }
+  to {
+    transform: translate(307px, 647px);
+    opacity: 0;
+  }
+}
+.flocon:nth-child(12) {
+  animation: snow-12 15s infinite;
+}
+@-webkit-keyframes snow-12 {
+  from {
+    transform: translate(379px, -262px);
+    opacity: 1;
+  }
+  to {
+    transform: translate(379px, 664px);
+    opacity: 0;
+  }
+}
+@keyframes snow-12 {
+  from {
+    transform: translate(379px, -262px);
+    opacity: 1;
+  }
+  to {
+    transform: translate(379px, 664px);
+    opacity: 0;
+  }
+}
+.flocon:nth-child(13) {
+  animation: snow-13 6s infinite;
+}
+@-webkit-keyframes snow-13 {
+  from {
+    transform: translate(57px, -179px);
+    opacity: 1;
+  }
+  to {
+    transform: translate(57px, 578px);
+    opacity: 0;
+  }
+}
+@keyframes snow-13 {
+  from {
+    transform: translate(57px, -179px);
+    opacity: 1;
+  }
+  to {
+    transform: translate(57px, 578px);
+    opacity: 0;
+  }
+}
+.flocon:nth-child(14) {
+  animation: snow-14 7s infinite;
+}
+@-webkit-keyframes snow-14 {
+  from {
+    transform: translate(393px, -258px);
+    opacity: 1;
+  }
+  to {
+    transform: translate(393px, 459px);
+    opacity: 0;
+  }
+}
+@keyframes snow-14 {
+  from {
+    transform: translate(393px, -258px);
+    opacity: 1;
+  }
+  to {
+    transform: translate(393px, 459px);
+    opacity: 0;
+  }
+}
+.flocon:nth-child(15) {
+  animation: snow-15 10s infinite;
+}
+
+@keyframes snow-15 {
+  from {
+    transform: translate(800px, -288px);
+    opacity: 1;
+  }
+  to {
+    transform: translate(800px, 495px);
+    opacity: 0;
+  }
+}
+.flocon:nth-child(16) {
+  animation: snow-16 14s infinite;
+}
+@keyframes snow-16 {
+  from {
+    transform: translate(1000px, -150px);
+    opacity: 1;
+  }
+  to {
+    transform: translate(1000px, 417px);
+    opacity: 0;
+  }
+}
