@@ -8,12 +8,10 @@ const template = themes => html`
        </ul>
 `;
 
-window.onload = () => {
-
+function afficheThemes () {
       function switchTheme(event) {
             const target = document.getElementById('css');
             const src = event.target;
-            console.log(target.href, "===>", src.href);
             target.href = src.href;
             event.preventDefault();
 

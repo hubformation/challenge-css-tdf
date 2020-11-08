@@ -1,7 +1,6 @@
-window.onload = function () {
+function paroleTogglerManager () {
     function paroleToggler(event) {
         const parolesDiv = document.getElementById('paroles');
-        console.log(Array.from(parolesDiv.classList).join(','))
         if (parolesDiv.classList.contains('hidden')) {
             event.target.innerHTML = 'Garder seulement le début';
             parolesDiv.classList.remove('hidden');

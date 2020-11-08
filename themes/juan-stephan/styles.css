@@ -379,12 +379,16 @@ input[type="range"]:focus::-ms-fill-upper {
   padding: 5%;
   color: #fff;
 }
+
 #pied-page a {
   color: #fff;
   text-decoration: none;
 }
 .media-sociaux ul {
   margin: 1rem 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
 }
 .media-sociaux li {
   margin: 0 0.5rem;
